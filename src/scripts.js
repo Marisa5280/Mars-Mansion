@@ -9,7 +9,7 @@ import {
   fetchRooms
 } from './apiCalls'
 
-// FETCHED DATA //
+// DATA MODELS //
 
 let customersData = [];
 let bookingsData = [];
@@ -45,6 +45,7 @@ window.addEventListener('load', () => {
   });
 });
 
+// EVENT LISTENERS //
 export {
   customersData,
   bookingsData,
