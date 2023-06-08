@@ -1,11 +1,53 @@
-// This is the JavaScript entry file - your code begins here
-// Do not delete or rename this file ********
+// IMPORTS //
 
-// An example of how you tell webpack to use a CSS (SCSS) file
 import './css/styles.css';
-
-// An example of how you tell webpack to use an image (also need to link to it in the index.html)
 import './images/turing-logo.png'
 
-//promise.all (translate data from fetch to sources of truth)
-console.log('This is the JavaScript entry file - your code begins here.');
+import {
+  fetchCustomers,
+  fetchBookings,
+  fetchRooms
+} from './apiCalls'
+
+// FETCHED DATA //
+
+let customersData = [];
+let bookingsData = [];
+let roomsData = [];
+let currentCustomer = {};
+
+window.addEventListener('load', () => {
+  Promise.all([fetchCustomers, fetchBookings, fetchRooms])
+  .then(responses => {
+    responses.forEach(response => {
+      if (response.ok) {
+        response.json()
+          .then(data => {
+            if (response.url.includes('/customers')) {
+              customersData = data.customers;
+            } else if (response.url.includes('/bookings')) {
+              bookingsData = data.bookings;
+            } else if (response.url.includes('/rooms')) {
+              roomsData = data.rooms;
+              currentCustomer = customersData[0]
+              // console.log(currentUser)
+              // displayRecipesToCook(currentUser, recipeData, savedRecipes)
+            }
+          })
+          .catch(error => {
+            console.error('Error parsing response:', error);
+          });
+      } else {
+        alert(`${response.status} server request failed, try again later`)
+        console.error('Request failed with status:', response.status);
+      }
+    });
+  });
+});
+
+export {
+  customersData,
+  bookingsData,
+  roomsData,
+  currentCustomer
+}
