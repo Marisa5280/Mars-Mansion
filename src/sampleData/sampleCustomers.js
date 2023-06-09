@@ -1,4 +1,4 @@
-let sampleCustomers = [
+const sampleCustomers = [
   {"id":1,"name":"Leatha Ullrich"},
   {"id":2,"name":"Rocio Schuster"},
   {"id":3,"name":"Kelvin Schiller"},
@@ -10,3 +10,5 @@ let sampleCustomers = [
   {"id":9,"name":"Faustino Quitzon"},
   {"id":10,"name":"Tony Armstrong"}
 ]
+
+export {sampleCustomers};
