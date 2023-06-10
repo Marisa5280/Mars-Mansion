@@ -5,7 +5,7 @@ describe('filterByDate',() => {
   let bookings;
   let rooms;
   beforeEach(() => {
-    bookings = sampleBookingsData;
-    rooms = sampleRoomsData;
+    bookings = sampleBookingsData.bookings;
+    rooms = sampleRoomsData.rooms;
   })
 })
