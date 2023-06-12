@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webpack Starter Kit</title>
+  <title> Mar's Mansion </title>
 </head>
 <body>
-  <img src="./images/turing-logo.png" alt="turing logo">
+  <!-- <img src="./images/turing-logo.png" alt="turing logo"> -->
   <div class="container">
     <nav>
       <!-- Sidebar Navigation -->
@@ -19,19 +19,22 @@
     </nav>
     
     <main>
-      <section class="booked__rooms">
-        <h2> Bookings </h2>
+      <section class="user__bookings">
+        <h2 class="user__bookings-title"> Bookings </h2>
+        <div class="user__currentBookings-container">
+        </div>
+        <div class="user-cost-container">
+          <h2 class="total-cost-message">Total Cost of Bookings</h2>
+        <div class="total-cost">
+          <p class="total-cost-value">$___</p>
+        </div>
       </section>
       
       <section>
-        <h2>Section 2</h2>
-        <p>This is the content of section 2.</p>
+        <h2 class="user__logIn"> Log In </h2>
+        <p> login page</p>
       </section>
       
-      <section>
-        <h2>Section 3</h2>
-        <p>This is the content of section 3.</p>
-      </section>
     </main>
   </div>
   <!-- Do not include the scripts.js or class files here - it is done by the webpack server -->
