@@ -7,17 +7,9 @@
   <title> Mar's Mansion </title>
 </head>
 <body>
+  <h1>Mar's Mansion</h1>
   <!-- <img src="./images/turing-logo.png" alt="turing logo"> -->
   <div class="container">
-    <nav>
-      <!-- Sidebar Navigation -->
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-    
     <main>
       <section class="user__bookings">
         <h2 class="user__bookings-title"> Bookings </h2>
@@ -29,12 +21,32 @@
           <p class="total-cost-value">$___</p>
         </div>
       </section>
-      
       <section>
         <h2 class="user__logIn"> Log In </h2>
-        <p> login page</p>
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input class="user__username" type="text" placeholder="Enter Username" name="uname" required>
+          <label for="psw"><b>Password</b></label>
+          <input class="user__password" type="password" placeholder="Enter Password" name="psw" required>
+          <button type="submit">Login</button>
+          <label>
       </section>
-      
+      <section class="new-booking__section">
+        <h2>Find a Stay</h2>
+        <div class="new-booking__date-filter">
+          <label for="booking">Please Choose a Date</label>
+          <input class="booking-date" tabindex='0' type="date" placeholder="yyyy/mm/dd" id="date">
+        </div>
+        <div class="new-booking__type-filter">
+          <label for="rooms">Filter by Type</label>
+          <select id="roomType" name="rooms" tabindex='0'>
+          <option value="single-room" tabindex='0'>Single Room</option>
+          <option value="junior-suite" tabindex='0'>Junior Suite</option>
+          <option value="residential-suite" tabindex='0'>Residential Suite</option>
+          <option value="suite" tabindex='0'>Suite</option>
+          </select>
+        </div>
+      </section>
     </main>
   </div>
   <!-- Do not include the scripts.js or class files here - it is done by the webpack server -->
