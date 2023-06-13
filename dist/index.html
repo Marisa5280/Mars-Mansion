@@ -7,34 +7,58 @@
   <title> Mar's Mansion </title>
 </head>
 <body>
-  <!-- <img src="./images/turing-logo.png" alt="turing logo"> -->
+  <h1>Mar's Mansion</h1>
   <div class="container">
-    <nav>
-      <!-- Sidebar Navigation -->
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-    
     <main>
       <section class="user__bookings">
         <h2 class="user__bookings-title"> Bookings </h2>
         <div class="user__currentBookings-container">
+          <div class="user__bookings-header">
+            <p>date</p>
+            <p>room type</p>
+            <p>bed size</p>
+            <p>number of beds</p>
+            <p>cost</p>
+          </div>
         </div>
         <div class="user-cost-container">
           <h2 class="total-cost-message">Total Cost of Bookings</h2>
         <div class="total-cost">
-          <p class="total-cost-value">$___</p>
+          <p class="total-cost-value"></p>
         </div>
       </section>
-      
       <section>
         <h2 class="user__logIn"> Log In </h2>
-        <p> login page</p>
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input class="user__username" type="text" placeholder="Enter Username" name="uname" required>
+          <label for="psw"><b>Password</b></label>
+          <input class="user__password" type="password" placeholder="Enter Password" name="psw" required>
+          <button class="user__logIn-Button" type="submit">Login</button>
+          <label>
       </section>
-      
+      <section class="new-booking__section">
+        <h2>Find a Stay</h2>
+        <div class="new-booking__date-filter">
+          <label for="booking">Please Choose a Date</label>
+          <input class="booking__date" tabindex='0' type="date" placeholder="yyyy/mm/dd" id="date">
+        </div>
+        <div class="new-booking__type-filter">
+          <label for="rooms">Filter by Type</label>
+          <select id="roomType" name="rooms" tabindex='0'>
+          <option value="single-room" tabindex='0'>Single Room</option>
+          <option value="junior-suite" tabindex='0'>Junior Suite</option>
+          <option value="residential-suite" tabindex='0'>Residential Suite</option>
+          <option value="suite" tabindex='0'>Suite</option>
+          </select>
+          <button class="new-booking__search-botton" type="submit">Search Bookings</button>
+        </div>
+        <section class="new-booking__avail-rooms">
+        </section>
+        <section class = "new-booking__no-avail" hidden>
+          <p class="apology">Sorry, there are no available rooms. Please adjust your search and try again!</p>
+        </section>
+      </section>
     </main>
   </div>
   <!-- Do not include the scripts.js or class files here - it is done by the webpack server -->
