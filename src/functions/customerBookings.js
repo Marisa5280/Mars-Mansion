@@ -1,6 +1,6 @@
-import { sampleRooms } from "../sampleData/sampleRooms";
-
 const getBookingsByCustomer = (id, bookings) => bookings.bookings.filter((booking) => booking.userID === id);
+
+console.log('customerBookings');
 
 const getTotalCost = (bookings, rooms) => 
   bookings.reduce((acc, booking) => {

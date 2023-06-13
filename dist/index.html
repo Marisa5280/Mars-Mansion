@@ -8,12 +8,25 @@
 </head>
 <body>
   <h1>Mar's Mansion</h1>
-  <!-- <img src="./images/turing-logo.png" alt="turing logo"> -->
   <div class="container">
     <main>
       <section class="user__bookings">
         <h2 class="user__bookings-title"> Bookings </h2>
         <div class="user__currentBookings-container">
+          <div class="user__bookings-header">
+            <p>date</p>
+            <p>room type</p>
+            <p>bed size</p>
+            <p>number of beds</p>
+            <p>cost</p>
+          </div>
+          <div class="user__booking">
+            <p>date</p>
+            <p>room type</p>
+            <p>bed size</p>
+            <p>number of beds</p>
+            <p>cost</p>
+          </div>
         </div>
         <div class="user-cost-container">
           <h2 class="total-cost-message">Total Cost of Bookings</h2>
@@ -28,14 +41,14 @@
           <input class="user__username" type="text" placeholder="Enter Username" name="uname" required>
           <label for="psw"><b>Password</b></label>
           <input class="user__password" type="password" placeholder="Enter Password" name="psw" required>
-          <button type="submit">Login</button>
+          <button class="user__logIn-Button" type="submit">Login</button>
           <label>
       </section>
       <section class="new-booking__section">
         <h2>Find a Stay</h2>
         <div class="new-booking__date-filter">
           <label for="booking">Please Choose a Date</label>
-          <input class="booking-date" tabindex='0' type="date" placeholder="yyyy/mm/dd" id="date">
+          <input class="booking__date" tabindex='0' type="date" placeholder="yyyy/mm/dd" id="date">
         </div>
         <div class="new-booking__type-filter">
           <label for="rooms">Filter by Type</label>
@@ -45,7 +58,13 @@
           <option value="residential-suite" tabindex='0'>Residential Suite</option>
           <option value="suite" tabindex='0'>Suite</option>
           </select>
+          <button class="new-booking__search-botton" type="submit">Search Bookings</button>
         </div>
+        <section class="new-booking__avail-rooms">
+        </section>
+        <section class = "new-booking__no-avail" hidden>
+          <p class="apology">Sorry, there are no available rooms. Please adjust your search and try again!</p>
+        </section>
       </section>
     </main>
   </div>

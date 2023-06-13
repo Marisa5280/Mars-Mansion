@@ -8,7 +8,8 @@ import {
   fetchBookings,
   fetchRooms
 } from './apiCalls'
-
+import { customerBookings } from './dom/domUpdates';
+import { sampleBookingsData } from './sampleData/sampleBookings';
 // DATA MODELS //
 
 let customersData = [];
@@ -29,9 +30,7 @@ window.addEventListener('load', () => {
               bookingsData = data.bookings;
             } else if (response.url.includes('/rooms')) {
               roomsData = data.rooms;
-              currentCustomer = customersData[0]
-              // console.log(currentUser)
-              // displayRecipesToCook(currentUser, recipeData, savedRecipes)
+              currentCustomer = customersData[0];
             }
           })
           .catch(error => {
@@ -44,8 +43,7 @@ window.addEventListener('load', () => {
     });
   });
 });
-
-// EVENT LISTENERS //
+customerBookings(2, sampleBookingsData)
 export {
   customersData,
   bookingsData,
