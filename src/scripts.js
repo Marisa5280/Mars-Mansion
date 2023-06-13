@@ -8,8 +8,8 @@ import {
   fetchBookings,
   fetchRooms
 } from './apiCalls'
-import { customerBookings } from './dom/domUpdates';
-import { sampleBookingsData } from './sampleData/sampleBookings';
+import { customerBookings } from './domUpdates';
+
 // DATA MODELS //
 
 let customersData = [];
@@ -43,7 +43,7 @@ window.addEventListener('load', () => {
     });
   });
 });
-customerBookings(2, sampleBookingsData)
+
 export {
   customersData,
   bookingsData,

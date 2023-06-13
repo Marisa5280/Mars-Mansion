@@ -20,6 +20,6 @@ describe('getBookingsByCustomer', function() {
 
   it('getTotalCost should calculate the cost of all customer bookings', function() {
     const customerBookings = getBookingsByCustomer(1, sampleBookingsData);
-    expect(getTotalCost(customerBookings, sampleRooms)).to.equal(698.11);
+    expect(getTotalCost(customerBookings, sampleRooms.rooms)).to.equal(698.11);
   });
 });

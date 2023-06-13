@@ -4,7 +4,7 @@ console.log('customerBookings');
 
 const getTotalCost = (bookings, rooms) => 
   bookings.reduce((acc, booking) => {
-    const room = rooms.rooms.find((room) => room.number === booking.roomNumber);
+    const room = rooms.find((room) => room.number === booking.roomNumber);
     return acc += room.costPerNight;
   }, 0);
 
